@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProjectB</string>
+
+    <string name="mytitle">hello hldohoakdshfl</string>
+    <string name="title">Let\'s sign you in.\n Welcome back \n You\'ve been missed.</string>
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_new_account">Don\'t have an account? Join us</string>
+
+</resources>

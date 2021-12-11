@@ -49,11 +49,13 @@
             android:text="@string/login" />
 
 
-        <TextView
+        <Button
+            android:id="@+id/btn_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="45dp"
+            android:background="@android:color/transparent"
             android:text="@string/forgot_password"
             android:textColor="@color/white" />
 

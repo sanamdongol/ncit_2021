@@ -24,6 +24,7 @@ public class DashBoardActivity extends AppCompatActivity {
         String cat = intentData.getStringExtra("category");
 
         tvName.setText(intentValue+"\n"+cat);
+        Log.e("catrogy value",cat);
 
         Log.e("intent value",intentValue);
         Toast.makeText(DashBoardActivity.this, intentValue, Toast.LENGTH_SHORT).show();

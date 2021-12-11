@@ -9,4 +9,6 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="create_new_account">Don\'t have an account? Join us</string>
 
+    <string name="field_required">"This field is required"</string>
+
 </resources>

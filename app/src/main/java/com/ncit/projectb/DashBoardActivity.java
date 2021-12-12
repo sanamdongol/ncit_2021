@@ -3,6 +3,11 @@ package com.ncit.projectb;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +20,7 @@ public class DashBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
 
-       TextView tvName=findViewById(R.id.tv_name);
+        TextView tvName = findViewById(R.id.tv_name);
 
 
         //Extract data from intent
@@ -23,10 +28,23 @@ public class DashBoardActivity extends AppCompatActivity {
         String intentValue = intentData.getStringExtra("name");
         String cat = intentData.getStringExtra("category");
 
-        tvName.setText(intentValue+"\n"+cat);
-        Log.e("catrogy value",cat);
+        tvName.setText(intentValue + "\n" + cat);
+        Log.e("catrogy value", cat);
 
-        Log.e("intent value",intentValue);
+        Log.e("intent value", intentValue);
         Toast.makeText(DashBoardActivity.this, intentValue, Toast.LENGTH_SHORT).show();
+
+        Button btnAnimate = findViewById(R.id.btn_animate);
+        ImageView imgView = findViewById(R.id.img);
+
+        btnAnimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation animation = AnimationUtils.loadAnimation(DashBoardActivity.this, R.anim.blink);
+                imgView.startAnimation(animation);
+            }
+        });
+
+
     }
 }

@@ -46,6 +46,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:onClick="onLogin"
+            android:background="@drawable/rounded_corner"
             android:text="@string/login" />
 
 

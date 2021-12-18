@@ -6,14 +6,20 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DashBoardActivity extends AppCompatActivity {
+
+
+    String[] months = {"Jan", "Feb", "Mar", "Apr"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,31 @@ public class DashBoardActivity extends AppCompatActivity {
 
         Button btnAnimate = findViewById(R.id.btn_animate);
         ImageView imgView = findViewById(R.id.img);
+
+        Spinner spinner = findViewById(R.id.spinner);
+
+       /*ArrayAdapter<String> adapter= new ArrayAdapter<String>(
+                DashBoardActivity.this,
+                R.layout.row_spinner,
+               months);*/
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                DashBoardActivity.this,
+                R.array.weeks,
+                R.layout.row_spinner);
+
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+              String selectedItem = adapterView.getItemAtPosition(position).toString();
+              Log.e("xxxx",selectedItem);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         btnAnimate.setOnClickListener(new View.OnClickListener() {
             @Override

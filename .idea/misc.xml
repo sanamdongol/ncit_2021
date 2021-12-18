@@ -3,14 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.21354166666666666" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_reaction_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/random_vect.xml" value="0.11666666666666667" />
         <entry key="app/src/main/res/drawable/red_circle.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_button_events.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.171875" />
-        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.36929460580912865" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.22" />
         <entry key="app/src/main/res/layout/new_login.xml" value="0.171875" />
+        <entry key="app/src/main/res/layout/row_spinner.xml" value="0.18" />
       </map>
     </option>
   </component>

@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
         etName = findViewById(R.id.et_name);
         etPass = findViewById(R.id.et_password);
+        etName.setText("abc");
+        etPass.setText("abc");
+
         Button btnResetPassword = findViewById(R.id.btn_forgot_password);
         btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         String name = etName.getText().toString();
         String password = etPass.getText().toString();
+
 
         boolean hasError = false;
         if (name.isEmpty()) {

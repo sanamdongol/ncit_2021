@@ -12,6 +12,8 @@
         <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.36929460580912865" />
+        <entry key="app/src/main/res/layout/activity_my_chips.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_my_styles.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.22" />
         <entry key="app/src/main/res/layout/new_login.xml" value="0.171875" />
         <entry key="app/src/main/res/layout/row_spinner.xml" value="0.18" />

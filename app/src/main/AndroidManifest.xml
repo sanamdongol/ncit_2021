@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectB">
         <activity
-            android:name="com.ncit.database.UserEntryActivity"
+            android:name="com.ncit.custom.CustomActivity"
             android:exported="true" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.ncit.database.UserEntryActivity"
+            android:exported="true"/>
+
 
         <activity
             android:name=".MyStylesActivity"

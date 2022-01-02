@@ -132,5 +132,7 @@ public class UserEntryActivity extends AppCompatActivity implements View.OnClick
         user.setPhoneNumber(Integer.parseInt(phoneNumber));
 
         db.userDao().addUser(user);
+
+        etUserName.clearComposingText();
     }
 }

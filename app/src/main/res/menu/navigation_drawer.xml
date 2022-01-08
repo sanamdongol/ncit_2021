@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item1"
+            android:checked="true"
+            android:icon="@drawable/ic_settings"
+            android:title="Menu 1" />
+        <item
+            android:id="@+id/item2"
+            android:icon="@drawable/ic_settings"
+            android:title="Menu 2" />
+        <item
+            android:id="@+id/item3"
+            android:icon="@drawable/ic_settings"
+            android:title="Menu 3" />
+    </group>
+
+    <item
+        android:id="@+id/item4"
+        android:checked="true"
+        android:icon="@drawable/ic_settings"
+        android:title="Menu 4" />
+    <item
+        android:id="@+id/item5"
+        android:icon="@drawable/ic_settings"
+        android:title="Menu 5" />
+    <item
+        android:id="@+id/item6"
+        android:icon="@drawable/ic_settings"
+        android:title="Menu 6" />
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/subtitle"
+            android:title="Subtitle">
+            <menu>
+                <item
+                    android:id="@+id/item7"
+                    android:icon="@android:drawable/ic_btn_speak_now"
+                    android:title="Item 7" />
+
+                <item
+                    android:id="@+id/item8"
+                    android:icon="@android:drawable/btn_minus"
+                    android:title="Item 8" />
+
+                <item
+                    android:id="@+id/item9"
+                    android:icon="@android:drawable/btn_minus"
+                    android:title="Item 9" />
+
+            </menu>
+        </item>
+    </group>
+</menu>

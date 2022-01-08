@@ -6,7 +6,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -18,10 +20,16 @@ import com.ncit.projectb.R;
 
 public class CustomActivity extends AppCompatActivity {
 
+
+    String settingTitles[] = {"Account", "General", "Bottom Appbar"};
+    // Image settingImages[] = {android.R.drawable.star_big_off,};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom);
+
+        //TODO: clean thi code harry
 
         Button btnDefaultToast = findViewById(R.id.btn_default_toast);
         Button btnChangePos = findViewById(R.id.btn_change_pos);
@@ -34,8 +42,12 @@ public class CustomActivity extends AppCompatActivity {
 
         LayoutInflater inflater = getLayoutInflater();
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 9; i++) {
             View myView = inflater.inflate(R.layout.custom_linear, linearLayout, false);
+            ImageView image = myView.findViewById(R.id.imageView10);
+            TextView tv = myView.findViewById(R.id.textView14);
+
+            tv.setText(settingTitles[0]);
             linearLayout.addView(myView);
         }
 
@@ -89,6 +101,7 @@ public class CustomActivity extends AppCompatActivity {
                 snackBar.show();
             }
         });
+
 
         btnDefaultDialog.setOnClickListener(new View.OnClickListener() {
             @Override

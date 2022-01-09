@@ -20,6 +20,7 @@ import com.ncit.projectb.R;
 
 public class CustomActivity extends AppCompatActivity {
 
+    //Janak, anil, Ayush, Rajan, Nitesh Dhungana, Sandeep Ghimire
 
     String settingTitles[] = {"Account", "General", "Bottom Appbar"};
     // Image settingImages[] = {android.R.drawable.star_big_off,};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_one"
+        android:icon="@android:drawable/star_big_on"
+
+        android:title="Item 1"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_two"
+        android:icon="@android:drawable/btn_minus"
+        android:title="Item 2"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@android:drawable/presence_busy"
+        android:orderInCategory="6"
+        android:title="Item 36"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@android:drawable/sym_call_missed"
+        android:orderInCategory="2"
+        android:title="Item 42"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@android:drawable/presence_away"
+        android:orderInCategory="1"
+        android:title="Item 51"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@android:drawable/sym_call_missed"
+        android:title="Item 42"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@android:drawable/sym_call_missed"
+        android:title="Item 42"
+        app:showAsAction="ifRoom" />
+</menu>

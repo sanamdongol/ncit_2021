@@ -10,17 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectB">
         <activity
-            android:name="com.ncit.navigationdraer.NavigationActivity"
+            android:name="com.ncit.automenu.AutoMenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.ncit.fragments.HostActivity"/>
 
+        <activity android:name="com.ncit.navigationdraer.NavigationActivity" />
+
+
+        <activity android:name="com.ncit.fragments.HostActivity" />
         <activity android:name="com.ncit.custom.CustomActivity" />
         <activity
             android:name="com.ncit.database.UserEntryActivity"

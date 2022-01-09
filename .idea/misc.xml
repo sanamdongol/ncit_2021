@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/random_vect.xml" value="0.11666666666666667" />
         <entry key="app/src/main/res/drawable/red_circle.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_auto_menu.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_button_events.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_custom.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.2" />
@@ -29,7 +30,9 @@
         <entry key="app/src/main/res/layout/row_spinner.xml" value="0.18" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/menu_auto.xml" value="0.17604166666666668" />
         <entry key="app/src/main/res/menu/navigation_drawer.xml" value="0.196875" />
+        <entry key="app/src/main/res/menu/pop_menu.xml" value="0.17604166666666668" />
       </map>
     </option>
   </component>

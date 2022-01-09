@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/ctx_one"
+        android:icon="@android:drawable/star_big_on"
+
+        android:title="Context Menu One" />
+    <item
+        android:id="@+id/ctx_two"
+        android:icon="@android:drawable/btn_minus"
+        android:title="Context Menu Two" />
+
 </menu>

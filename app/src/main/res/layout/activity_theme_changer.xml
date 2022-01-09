@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ncit.themechange.ThemeChangerActivity">
+
+    <Button
+        android:id="@+id/btn_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light Theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark Theme"
+        app:layout_constraintEnd_toEndOf="@+id/btn_light"
+        app:layout_constraintStart_toStartOf="@+id/btn_light"
+        app:layout_constraintTop_toBottomOf="@+id/btn_light" />
+
+    <Button
+        android:id="@+id/btn_sys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="System Theme"
+        app:layout_constraintEnd_toEndOf="@+id/btn_dark"
+        app:layout_constraintStart_toStartOf="@+id/btn_dark"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dark" />
+
+    <Button
+        android:id="@+id/btn_new_act"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sys"
+        app:layout_constraintStart_toStartOf="@+id/btn_sys"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sys" />
+</androidx.constraintlayout.widget.ConstraintLayout>

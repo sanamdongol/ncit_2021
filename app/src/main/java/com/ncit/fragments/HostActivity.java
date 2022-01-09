@@ -32,7 +32,7 @@ public class HostActivity extends AppCompatActivity {
                         changeFragment(new ShortsFragment());
                         return true;
                     case R.id.menu_3:
-                        changeFragment(new ProfileFragment());
+                        changeFragment(ProfileFragment.newInstance("Sunday", "LockdownDay"));
                         return true;
                     case R.id.menu_4:
                         changeFragment(new SettingsFragment());
@@ -45,28 +45,7 @@ public class HostActivity extends AppCompatActivity {
             }
         });
 
-      /*  Button btnHome = findViewById(R.id.btn_home);
-        Button btnProfile = findViewById(R.id.btn_profile);
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager manager = getSupportFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
-                transaction.add(R.id.fragment_container, new HomeFragment());
-                transaction.commit();
-            }
-        });
-
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager manager = getSupportFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
-                transaction.add(R.id.fragment_container, new ProfileFragment());
-                transaction.commit();
-            }
-        });*/
     }
 
     private void changeFragment(Fragment fragment) {

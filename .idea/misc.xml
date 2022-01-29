@@ -5,11 +5,13 @@
       <map>
         <entry key="../../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_reaction_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/drawable/random_vect.xml" value="0.11666666666666667" />
         <entry key="app/src/main/res/drawable/red_circle.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_auto_menu.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_button_events.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_collection.xml" value="0.11574074074074074" />
         <entry key="app/src/main/res/layout/activity_custom.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.22" />
@@ -19,6 +21,7 @@
         <entry key="app/src/main/res/layout/activity_my_styles.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_my_theme.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.10648148148148148" />
+        <entry key="app/src/main/res/layout/activity_pica_glide.xml" value="0.2515625" />
         <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_theme_changer.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_user_entry.xml" value="0.33" />
@@ -29,6 +32,7 @@
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.13518518518518519" />
         <entry key="app/src/main/res/layout/fragment_shorts.xml" value="0.1828125" />
         <entry key="app/src/main/res/layout/new_login.xml" value="0.171875" />
+        <entry key="app/src/main/res/layout/row_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/row_spinner.xml" value="0.18" />
         <entry key="app/src/main/res/layout/toast_layout.xml" value="0.1398148148148148" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />

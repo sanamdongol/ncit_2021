@@ -29,20 +29,93 @@ public class CollectionActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
+        String[] images = {
+                "https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg",
+                "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+                "https://images.unsplash.com/photo-1643397652696-e633822828fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80",
+                "https://images.unsplash.com/photo-1643379120803-a478f56aa5e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60",
+                "https://images.unsplash.com/photo-1643400812627-288aa24ccd29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+                "https://images.unsplash.com/photo-1643386777909-04835ade3530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+                "https://images.unsplash.com/photo-1643166406764-569565811559?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+                "https://images.unsplash.com/photo-1643293383951-0755fda59471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+                "https://images.unsplash.com/photo-1643306633346-30cf2efcab78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+                "https://images.unsplash.com/photo-1643336157369-bfd90e14d7e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1NHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60"
+        };
 
 
-        for (int i = 0; i < 20; i++) {
-            User user = new User("Title" + i, "Desc " + i, R.drawable.canada);
+        for (int i = 0; i < 10; i++) {
+            User user = new User("Title" + i, "Desc " + i, images[i]);
             arrayList.add(user);
         }
 
+        DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         MyAdapter adapter = new MyAdapter(arrayList);
+        recyclerView.addItemDecoration(decoration);
         recyclerView.setAdapter(adapter);
     }
 
 }
 
-class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+
+class MyAdapter extends RecyclerView.Adapter<MyAdapter.RowViewHolder> {
+
+    private List<User> arrazyList;
+
+    public MyAdapter(List<User> arrazyList) {
+        this.arrazyList = arrazyList;
+    }
+
+
+    @NonNull
+    @Override
+    public RowViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.row_item, parent, false);
+        return new RowViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RowViewHolder holder, int i) {
+        User user = arrazyList.get(i);
+        holder.getTvTitle().setText(user.getTitle());
+        holder.getTvDesc().setText(user.getDesc());
+        Picasso.get().load(user.getImages()).into(holder.getImg());
+    }
+
+    @Override
+    public int getItemCount() {
+        return arrazyList.size();
+    }
+
+    public class RowViewHolder extends RecyclerView.ViewHolder {
+        ImageView img;
+        TextView tvTitle;
+        TextView tvDesc;
+
+        public RowViewHolder(@NonNull View itemView) {
+            super(itemView);
+            img = itemView.findViewById(R.id.img);
+            tvTitle = itemView.findViewById(R.id.tv_title);
+            tvDesc = itemView.findViewById(R.id.tv_desc);
+        }
+
+        public ImageView getImg() {
+            return img;
+        }
+
+        public TextView getTvDesc() {
+            return tvDesc;
+        }
+
+        public TextView getTvTitle() {
+            return tvTitle;
+        }
+    }
+}
+
+
+
+/*class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private List<User> arrayList;
 
@@ -98,14 +171,14 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             return tvTitle;
         }
     }
-}
+}*/
 
 class User {
     String title;
     String desc;
-    int images;
+    String images;
 
-    public User(String title, String desc, int images) {
+    public User(String title, String desc, String images) {
         this.title = title;
         this.desc = desc;
         this.images = images;
@@ -127,11 +200,11 @@ class User {
         this.desc = desc;
     }
 
-    public int getImages() {
+    public String getImages() {
         return images;
     }
 
-    public void setImages(int images) {
+    public void setImages(String images) {
         this.images = images;
     }
 }

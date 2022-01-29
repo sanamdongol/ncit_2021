@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectB">
         <activity
-            android:name="com.ncit.picaglide.PicaGlideActivity"
+            android:name="com.ncit.retro.RetroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ncit.CollectionActivity"
+            android:name="com.ncit.picaglide.PicaGlideActivity"
             android:exported="true" />
+        <activity
+            android:name="com.ncit.CollectionActivity"
+            android:exported="true">
 
-
+        </activity>
         <activity
             android:name="com.ncit.themechange.MyThemeActivity"
             android:exported="false"

@@ -14,11 +14,7 @@
         <activity
             android:name="com.ncit.retro.RetroActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.ncit.picaglide.PicaGlideActivity"
@@ -26,7 +22,10 @@
         <activity
             android:name="com.ncit.CollectionActivity"
             android:exported="true">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.ncit.themechange.MyThemeActivity"

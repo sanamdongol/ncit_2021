@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.ncit.projectb.R;
 import com.squareup.picasso.Picasso;
@@ -30,7 +32,7 @@ public class CollectionActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
         String[] images = {
-                "https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg",
+                "https://images.unsplash.com/photo-1643336157369-bfd90e14d7e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1NHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
                 "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
                 "https://images.unsplash.com/photo-1643397652696-e633822828fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80",
                 "https://images.unsplash.com/photo-1643379120803-a478f56aa5e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60",
@@ -48,9 +50,23 @@ public class CollectionActivity extends AppCompatActivity {
             arrayList.add(user);
         }
 
-        DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+
+        // use a linear layout manager
+        //    LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //  recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+
+        //  GridLayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 3);
+        // layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+
+      //  DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         MyAdapter adapter = new MyAdapter(arrayList);
-        recyclerView.addItemDecoration(decoration);
+        recyclerView.setLayoutManager(layoutManager);
+       // recyclerView.addItemDecoration(decoration);
         recyclerView.setAdapter(adapter);
     }
 
@@ -112,66 +128,6 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.RowViewHolder> {
         }
     }
 }
-
-
-
-/*class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-
-    private List<User> arrayList;
-
-    public MyAdapter(List<User> arrayList) {
-        this.arrayList = arrayList;
-    }
-
-
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_item, parent, false);
-        return new MyViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        User user = arrayList.get(position);
-        holder.getTvTitle().setText(user.getTitle());
-        holder.getTvDesc().setText(user.getDesc());
-        Picasso.get().load(user.getImages()).into(holder.getImg());
-    }
-
-
-    @Override
-    public int getItemCount() {
-        return arrayList.size();
-    }
-
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tvTitle;
-        TextView tvDesc;
-        ImageView img;
-
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvDesc = itemView.findViewById(R.id.tv_desc);
-            tvTitle = itemView.findViewById(R.id.tv_title);
-            img = itemView.findViewById(R.id.img);
-
-        }
-
-        public ImageView getImg() {
-            return img;
-        }
-
-        public TextView getTvDesc() {
-            return tvDesc;
-        }
-
-        public TextView getTvTitle() {
-            return tvTitle;
-        }
-    }
-}*/
 
 class User {
     String title;

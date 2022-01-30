@@ -24,4 +24,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="good_evening">Good Evening</string>
+    <string name="how_are_you">How are you?</string>
+    <string name="nice_to_meet_you">Nice to meet you</string>
+    <string name="have_a_nice_day">Have a nice day</string>
+    <string name="good_morning">Good Morning</string>
+
 </resources>

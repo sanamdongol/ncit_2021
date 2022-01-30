@@ -1,6 +1,11 @@
 package com.ncit.automenu;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +26,8 @@ public class AutoMenuActivity extends AppCompatActivity {
 
     String[] misc = {"Mango", "Banana", "Pear", "Orange", "Avacodo", "Apple", "App", "Beer", "Champange", "Trees", "Car"};
     private ActionMode actionMode;
+
+    BroadcastReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +77,30 @@ public class AutoMenuActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        receiver = new BroadcastReceiver() {
+
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Log.d("TAG", "onReceive: airplane mode changed");
+            }
+        };
+
+    }
+
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AutoMenuActivity.this.registerReceiver(receiver,
+                new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AutoMenuActivity.this.unregisterReceiver(receiver);
     }
 
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -52,15 +53,15 @@ public class CollectionActivity extends AppCompatActivity {
 
 
         // use a linear layout manager
-        //    LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+         //   LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         //  recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 
-        //  GridLayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 3);
-        // layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+          GridLayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
+         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
 
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
+      //  StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3, LinearLayoutManager.VERTICAL);
+       // layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
 
       //  DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);

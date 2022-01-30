@@ -1,10 +1,17 @@
 package com.ncit.mutlilang;
 
+import static android.content.Intent.ACTION_AIRPLANE_MODE_CHANGED;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +21,9 @@ import com.ncit.projectb.R;
 import java.util.Locale;
 
 public class MultiLangActivity extends AppCompatActivity {
+
+
+    BroadcastReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +37,13 @@ public class MultiLangActivity extends AppCompatActivity {
                 showLanguageOptions();
             }
         });
+
+        receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Toast.makeText(MultiLangActivity.this, "Airplane mode changed", Toast.LENGTH_SHORT).show();
+            }
+        };
     }
 
     private void showLanguageOptions() {
@@ -68,5 +85,18 @@ public class MultiLangActivity extends AppCompatActivity {
         configuration.locale = locale;
 
         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MultiLangActivity.this.registerReceiver(receiver,
+                new IntentFilter(ACTION_AIRPLANE_MODE_CHANGED));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MultiLangActivity.this.unregisterReceiver(receiver);
     }
 }

@@ -54,6 +54,8 @@ dependencies {
 
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //ads
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
 
 
 }

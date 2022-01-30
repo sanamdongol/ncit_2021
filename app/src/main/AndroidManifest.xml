@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectB">
         <activity
+            android:name="com.ncit.activityLifeCycle.LifeCycleActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.ncit.mutlilang.MultiLangActivity"
             android:exported="true">
             <intent-filter>
@@ -22,9 +32,7 @@
         </activity>
         <activity
             android:name="com.ncit.ads.AdsActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="com.ncit.retro.RetroActivity"
             android:exported="true" />
@@ -33,7 +41,7 @@
             android:exported="true" />
         <activity
             android:name="com.ncit.CollectionActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="com.ncit.themechange.MyThemeActivity"
             android:exported="false"
